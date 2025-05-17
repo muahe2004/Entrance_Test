@@ -77,7 +77,10 @@ const PostForm = ({ onAddPost, onClose, isClosed }: PostFormProps) => {
                 <span className={`form-error ${errors.body ? 'visible' : ''}`}>Body cannot be empty</span>
             </div>
 
-            <button className="form-sbumit" type="submit" disabled={isLoading}>Add Post</button>
+            <div className="button-group">
+              <button className="form-btn form-close" type="button" onClick={onClose}>Close</button>
+              <button className="form-btn form-sbumit" type="submit" disabled={isLoading}>Add Post</button>
+            </div>
         </form>
     </div>
   );

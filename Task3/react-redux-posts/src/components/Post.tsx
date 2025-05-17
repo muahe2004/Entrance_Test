@@ -1,8 +1,6 @@
-// Post.jsx
 import React from "react";
 import "../styles/post.css";
 
-// const Post = ({ id, userId, title, body}) => {
 const Post = ({ title, body}) => {
   return (
     <div className="post">

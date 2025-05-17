@@ -19,6 +19,10 @@ function sumTwoMax(arr) {
         }
     }
 
+    if (max2 === -Infinity) {
+      return max1;
+    }
+
     return max1 + max2;
 }
 
@@ -43,3 +47,9 @@ console.log("Test 6:", sumTwoMax(arr6));
 
 const arr7 = [2];
 console.log("Test 7:", sumTwoMax(arr7));
+
+const arr8 = [5, 5];
+console.log("Test 8:", sumTwoMax(arr8));
+
+const arr9 = [5, 5, 5];
+console.log("Test 9:", sumTwoMax(arr9));

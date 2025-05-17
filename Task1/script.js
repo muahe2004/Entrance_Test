@@ -32,5 +32,8 @@ console.log(mostFrequentLengthStr(['hello', 'hi', 'hey', 'yo', 'no']));
 console.log(mostFrequentLengthStr([])); 
 console.log(mostFrequentLengthStr(['a', 'b', 'c'])); 
 console.log(mostFrequentLengthStr(['ab', 'abc', 'abcd', 'ab', 'abc']));
+console.log(mostFrequentLengthStr(['a', 'ab', 'abc', 'abcd']) );
+console.log(mostFrequentLengthStr(['abc', 'de', 'fgh', 'ij', 'kl']));
+console.log(mostFrequentLengthStr(['a', 'a', 'a']) );
 
 

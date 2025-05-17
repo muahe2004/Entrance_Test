@@ -1,8 +1,6 @@
-// Post.jsx
 import React from "react";
 import "../styles/alert.css";
 
-// const Post = ({ id, userId, title, body}) => {
 const Alert = ({ message, className}) => {
   return (
     <div className={`alert ${className}`}>

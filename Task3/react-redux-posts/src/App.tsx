@@ -12,27 +12,21 @@ function App() {
   const [isClosedForm, setIsClosedForm] = useState(true);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // Khi dữ liệu API load xong, set vào state
   useEffect(() => {
     if (fetchedPosts) {
       setPosts(fetchedPosts);
     }
   }, [fetchedPosts]);
 
-  // Hàm này sẽ được gọi sau khi thêm thành công
+  // Post added successfully
   const handleAddPost = (newPost: PostType) => {
     setPosts((prevPosts) => [newPost, ...prevPosts]);
     setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 4000); // Tự ẩn sau 3s
+    setTimeout(() => setShowSuccess(false), 4000); 
   };
 
-  if (isLoading) return <p>Đang tải...</p>;
-  if (error) return <p>Lỗi: {(error as any).message}</p>;
-
-  // Ẩn hiện PopUp
-  // const [isClosedAddDone, setIsClosedAddDone] = useState(true);
-  // const handleOpenAddDone = () => { setIsClosedAddDone(false)};
-  // const handleCloseAddDone = () => { setIsClosedAddDone(true)};
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error: {(error as any).message}</p>;
 
   const handleOpenForm = () => { setIsClosedForm(false)};
   const handleCloseForm = () => { setIsClosedForm(true)};
